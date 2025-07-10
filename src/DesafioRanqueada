@@ -1,0 +1,25 @@
+let resultado = partidasRanqueadas (120, 20)
+console.log(resultado)
+
+function partidasRanqueadas(quantVitorias, quantDerrotas){
+	let saldoFinal = quantVitorias - quantDerrotas
+	let nivel = ""
+
+if (saldoFinal < 10){
+    	nivel = "ferro"
+    } else if(saldoFinal >= 10 && saldoFinal < 20){
+    	nivel = "Bronze"
+    } else if(saldoFinal >= 20 && saldoFinal < 50){
+    	nivel = "Prata"
+    } else if(saldoFinal >= 50 && saldoFinal < 80){
+    	nivel = "Ouro"
+    } else if(saldoFinal >= 80 && saldoFinal < 90){
+    	nivel = "Diamante"
+    } else if(saldoFinal >= 90 && saldoFinal < 100){
+    	nivel = "Lendário"
+    } else {
+    	nivel = "Imortal"
+}	
+return `O herói tem saldo de ${saldoFinal} e está no nível ${nivel}.`
+
+}
